@@ -5,17 +5,27 @@
     <meta charset="utf-8" />
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" />
+
 </head>
 <body ng-controller="indexController">
 
-    <div class="container">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." ng-model="searchTerm">
+    <!--<div class="container">
+        <div class="input-group">-->
+            <!--<input type="text" class="form-control" placeholder="Search for..." ng-model="searchTerm">
             <i class="large material-icons">theaters</i>
             <span class="input-group-btn">
                 <button class="btn btn-default"  type="button" ng-click="searchForMovie()">Go!</button>
-            </span>
-        </div><!-- /input-group -->
+            </span>-->
+
+         <center><img src="images/Drawing.png" id="logo"></center> 
+
+            <form class="searchform cf">
+                <input type="text" placeholder="Search for Movie Here" ng-model="searchTerm">
+                <center><button class="btn btn-default" type="button" ng-click="searchForMovie()">Search</button></center> 
+            </form>
+
+        <!--</div>--><!-- /input-group -->
 
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="movie in movies">
@@ -24,14 +34,14 @@
                         <img src="{{movie.Poster}}" class="center-block" /> 
                         <div class="panel-body">
                         <small>Filmed in {{movie.Year}}</small>
-                        <a ng href="http://www.imdb.com/title/{{movie.imdbID}}"class="center-block"><center>Click here for IMDB Profile</center></a><br />
+                        <a ng href="http://www.imdb.com/title/{{movie.imdbID}}"class="center-block"><font color="black"><center>Click here for IMDB Profile</center></font></a><br />
                         <a ng href="http://www.themoviedb.org/search/{{movie.moviedbID}}">Click here to see The Movie Database profile</a>
                     </div>
                     </div>
                
             </div>
         </div>
-    </div>
+    <!--</div>-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
