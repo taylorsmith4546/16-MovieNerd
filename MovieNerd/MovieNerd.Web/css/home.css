@@ -126,3 +126,15 @@ a:visited {
 .searchform button:hover {
   opacity: .9;
 }
+
+/*Results*/
+
+#results{
+
+  font-family: 'Nunito', sans-serif;
+}
+
+#resultsimdb{
+
+   font-family: 'Nunito', sans-serif;
+}
